@@ -1,0 +1,72 @@
+@font-face {
+  font-family: "Chirp";
+  src: url("fonts/chirp-regular-web.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Chirp";
+  src: url("fonts/chirp-medium-web.woff") format("woff");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Chirp";
+  src: url("fonts/chirp-bold-web.woff") format("woff");
+  font-weight: bold;
+}
+
+body,html {
+  font-family: Chirp;
+  background-color: black;
+  height:2000px;
+  width: 100%;
+  color: white;
+  display: unset;
+  margin: 0px;
+}
+
+.dynamic-flex {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.left-flex {
+  display: flex;
+  width: 30%;
+  position: fixed;
+}
+
+.middle-flex {
+  background-color: black;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  margin-left: 30%;
+  margin-right: 35%;
+  border: 1px solid rgb(75, 75, 75);
+}
+
+.post-flex {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(75, 75, 75);
+}
+
+.form-flex {
+  display: flex;
+}
+
+.tweet-flex {
+  display: flex;
+}
+
+.right-flex {
+  width: 450px;
+  position: fixed;
+  width: 35%;
+  right: 0;
+}
