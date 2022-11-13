@@ -15,9 +15,12 @@ const Document = path.join(__dirname, 'views', 'index.html')
 const PORT = process.env.PORT || 3600;
 
 app.use('/', express.static(path.join(__dirname, '/views')));
+app.use('/', express.static(path.join(__dirname, '/images')));
 
+app.use(express.json());
 
 app.get("/api/tweets", (req, response) => {
+  console.log("a");
   const allTweets = Tweet.find({});
   allTweets
   .then((res) => JSON.stringify(res))
@@ -28,13 +31,14 @@ app.get("/api/tweets", (req, response) => {
 
 app.post("/api/tweets", (req, res) => {
   console.log("Button clicked")
-  
+  const {author, tweet} = req.body
   const t = Tweet.create({
-    "author": req.body.author,
-    "tweet": req.body.tweet,
+    "author": author,
+    "tweet": tweet,
   })
   
   console.log(t);
+  window.location.reload()
 })
 
 
